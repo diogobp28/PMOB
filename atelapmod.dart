@@ -46,13 +46,17 @@ class _CaixaDeEntrada extends State<CaixaDeEntrada> with SingleTickerProviderSta
     Container(
       height = MediaQuery.of(context).size.height - 150,
       child: TabBarView(
+        
         controller = _controller,
+        
         children:<Widget>[
           
+          //nos conteiners, vai todo o conteúdo - o "body"
+
           Container(
             color: Colors.blue,
             child: Align(child: Text("Avisos de TUDO"))
-          ),
+          ), 
 
           Container(
             color: Colors.blue,
@@ -82,6 +86,8 @@ class _CaixaDeEntrada extends State<CaixaDeEntrada> with SingleTickerProviderSta
     );
 
     return 
+    
+    // esse arquivo será mandado para um outro por esse return - o menu
   }
 
 }
