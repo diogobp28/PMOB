@@ -39,11 +39,12 @@ class _CaixaDeEntrada extends State<CaixaDeEntrada>{
   }
 
   buildListStyle(
-    {String urlImagem: 'https://image.flaticon.com/icons/png/512/1665/1665731.png'}
-    String tipoMensagem, 
-    String msg, 
-    String data){
-    return ListTile(
+      {String urlImagem: 'https://image.flaticon.com/icons/png/512/1665/1665731.png'}
+      String tipoMensagem, 
+      String msg, 
+      String data)
+    {
+      return ListTile(
           
           //leading: Icon(Icons.account_circle_rounde, size:40),
 
@@ -63,6 +64,6 @@ class _CaixaDeEntrada extends State<CaixaDeEntrada>{
             Text(data, 
             style: 
               TextStyle(color: Colors.blue)), 
-        ); // listas
-  }
+      ); // listas
+    }
 }
