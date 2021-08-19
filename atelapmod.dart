@@ -1,4 +1,5 @@
-import 'package:flutter/alistatelas.dart';
+import 'package:flutter/material.dart';
+import 'alistatelas.dart';
 
 class CaixaDeEntrada extends StatefulWidget{
 
@@ -37,7 +38,11 @@ class _CaixaDeEntrada extends State<CaixaDeEntrada> with SingleTickerProviderSta
             Tab(text:"PLANTÕES"),
             Tab(text:"MENSAGENS"),
             Tab(text:"AVISOS"),
-            Tab(), // tab com ícone de lixeira
+            Tab( CircleAvatar
+            (backgroundImage: 
+            NetworkImage("https://w7.pngwing.com/pngs/905/219/png-transparent-rubbish-bins-waste-paper-baskets-computer-icons-bin-bag-trash-icon-rectangle-waste-symmetry.png"), 
+            radius: 20)
+            ), // tab com ícone de lixeira
           ], // tabs da parte de cima
         ), // tabbar
       ],
@@ -50,32 +55,30 @@ class _CaixaDeEntrada extends State<CaixaDeEntrada> with SingleTickerProviderSta
         controller = _controller,
         
         children:<Widget>[
-          
-          //nos conteiners, vai todo o conteúdo - o "body"
 
-          Container(
+          Container( // todos
             color: Colors.blue,
-            child: Align(child: Text("Avisos de TUDO"))
+            Lista(); 
           ), 
 
-          Container(
+          Container( // plantões
             color: Colors.blue,
-            child: Align(child: Text("Avisos de PLANTÕES"))
+            Lista();
           ),
 
-          Container(
+          Container( //mensagens 
             color: Colors.blue,
-            child: Align(child: Text("Avisos de MENSAGENS"))
+            Lista();
           ),
 
-          Container(
+          Container( //avisos
             color: Colors.blue,
-            child: Align(child: Text("Avisos de AVISOS"))
+            Lista(); 
           ),
 
-          Container(
-            color: Colors.blue,
-            child: Align(child: Text("ITENS DE APAGADO"))
+          Container( // itens apagados
+            color: Colors.blue, 
+            child: Align(child: Text("ITENS DE APAGADO")) 
           ),
 
         ],
@@ -85,9 +88,8 @@ class _CaixaDeEntrada extends State<CaixaDeEntrada> with SingleTickerProviderSta
       child: Text(""),
     );
 
-    return 
-    
-    // esse arquivo será mandado para um outro por esse return - o menu
+    // esse arquivo será mandado pelo return para o menu. 
+
   }
 
 }
